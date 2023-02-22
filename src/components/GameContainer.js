@@ -34,11 +34,11 @@ export function GameContainer(){
                     </div>
                     <div className="selection-card">
                         <img src={PaperHand}/>
-                        <h3 className="card-text">Pedra</h3>
+                        <h3 className="card-text">Papel</h3>
                     </div>
                     <div className="selection-card">
                         <img src={ScissorHand}/>
-                        <h3 className="card-text">Pedra</h3>
+                        <h3 className="card-text">Tesoura</h3>
                     </div>
                 </div>
             </div>
