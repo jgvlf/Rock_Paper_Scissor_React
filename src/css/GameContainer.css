@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.text-gc {
+  font-size: 24px;
+}
+
+.score {
+  display: flex;
+  margin: 40px 100px;
+}
+
+.p-score {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.c-score {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.ps-text {
+  color: blue;
+}
+
+.cs-text {
+  color: red;
+}
+
+.cards {
+  display: flex;
+  margin-top: 70px;
+}
+
+.selection-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  flex: 1;
+}
+
+.card-text {
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=GameContainer.css.map */
