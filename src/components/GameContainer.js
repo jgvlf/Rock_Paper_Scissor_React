@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import "../css/GameContainer.css"
 import { Card } from "./Card";
-import RockHand from "../img/hand.svg"
-import PaperHand from "../img/hand-2.svg"
-import ScissorHand from "../img/hand-3.svg"
-import ResetIcon from "../img/restart.svg"
 import { Reset } from "./Reset";
-import { getValue } from "@testing-library/user-event/dist/utils";
 
 export function GameContainer(){
     const selection =[
@@ -73,9 +68,9 @@ export function GameContainer(){
                     <h1 className="text-gc">Faça sua seleção</h1>
                 </div>
                 <div className="cards">
-                    <Card onClick={getRockValue} className="img-icon image-selection" id="rock" text="Pedra" src={RockHand}/>
-                    <Card onClick={getPaperValue} className="img-icon image-selection" id="paper" text="Papel" src={PaperHand}/>
-                    <Card onClick={getScissorValue} className="img-icon image-selection" id="scissor" text="Tesoura" src={ScissorHand}/>
+                    <Card onClick={getRockValue} className="img-icon image-selection" id="rock" text="Pedra"/>
+                    <Card onClick={getPaperValue} className="img-icon image-selection" id="paper" text="Papel"/>
+                    <Card onClick={getScissorValue} className="img-icon image-selection" id="scissor" text="Tesoura"/>
                 </div>
             </div>
         </>
