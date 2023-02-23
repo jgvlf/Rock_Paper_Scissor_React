@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../css/GameContainer.css"
+import { Card } from "./Card";
 import RockHand from "../img/hand.svg"
 import PaperHand from "../img/hand-2.svg"
 import ScissorHand from "../img/hand-3.svg"
+import ResetIcon from "../img/restart.svg"
+import { Reset } from "./Reset";
 
 export function GameContainer(){
     const selection = {
@@ -24,22 +27,16 @@ export function GameContainer(){
                         <h3 className="cs-text">Computador: {computerScore}</h3>
                     </div>
                 </div>
+                <div className="reset-div">
+                    <Reset className="img-icon icon icon-reset" id="reset"/>
+                </div>
                 <div className="container-title">
                     <h1 className="text-gc">Faça sua seleção</h1>
                 </div>
                 <div className="cards">
-                    <div className="selection-card">
-                        <img src={RockHand}/>
-                        <h3 className="card-text">Pedra</h3>
-                    </div>
-                    <div className="selection-card">
-                        <img src={PaperHand}/>
-                        <h3 className="card-text">Papel</h3>
-                    </div>
-                    <div className="selection-card">
-                        <img src={ScissorHand}/>
-                        <h3 className="card-text">Tesoura</h3>
-                    </div>
+                    <Card className="img-icon image-selection" id="rock" text="Pedra" src={RockHand}/>
+                    <Card className="img-icon image-selection" id="paper" text="Papel" src={PaperHand}/>
+                    <Card className="img-icon image-selection" id="scissor" text="Tesoura" src={ScissorHand}/>
                 </div>
             </div>
         </>
