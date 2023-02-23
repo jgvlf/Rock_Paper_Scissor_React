@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/reset.css";
 
-export function Reset({className, id}){
+export function Reset({className, id, onClick}){
     return(
-        <span className={className} id={id}/>
+        <span onClick={onClick} className={className} id={id}/>
     )
 }
