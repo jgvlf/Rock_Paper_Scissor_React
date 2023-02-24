@@ -62,15 +62,15 @@ export function GameContainer(){
                     </div>
                 </div>
                 <div className="reset-div">
-                    <Reset onClick={getResetValue} className="img-icon icon icon-reset" id="reset"/>
+                    <Reset onClick={getResetValue}/>
                 </div>
                 <div className="container-title">
                     <h1 className="text-gc">Faça sua seleção</h1>
                 </div>
                 <div className="cards">
-                    <Card onClick={getRockValue} className="img-icon image-selection" id="rock" text="Pedra"/>
-                    <Card onClick={getPaperValue} className="img-icon image-selection" id="paper" text="Papel"/>
-                    <Card onClick={getScissorValue} className="img-icon image-selection" id="scissor" text="Tesoura"/>
+                    <Card onClick={getRockValue} className="las la-hand-rock" id="rock" text="Pedra"/>
+                    <Card onClick={getPaperValue} className="las la-hand-paper" id="paper" text="Papel"/>
+                    <Card onClick={getScissorValue} className="las la-hand-scissors" id="scissor" text="Tesoura"/>
                 </div>
             </div>
         </>

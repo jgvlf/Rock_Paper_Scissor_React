@@ -23,42 +23,32 @@
   background-size: cover;
 }
 
-#rock {
-  background-image: url("../img/hand.svg");
+.la-hand-rock {
+  transform: rotate(90deg);
+  font-size: 200px;
 }
 
-#rock:hover,
-#rock:focus {
-  background-image: url("../img/hand_hover.svg");
-}
-
-#rock:hover + .card-text {
+.la-hand-rock:hover,
+.la-hand-rock:hover + .card-text {
   color: #00c4c4;
 }
 
-#paper {
-  background-image: url("../img/hand-2.svg");
+.la-hand-paper {
+  font-size: 200px;
 }
 
-#paper:hover,
-#paper:focus {
-  background-image: url("../img/hand-2_hover.svg");
-}
-
-#paper:hover + .card-text {
+.la-hand-paper:hover,
+.la-hand-paper:hover + .card-text {
   color: #00c4c4;
 }
 
-#scissor {
-  background-image: url("../img/hand-3.svg");
+.la-hand-scissors {
+  transform: scale(-1, 1);
+  font-size: 200px;
 }
 
-#scissor:hover,
-#scissor:focus {
-  background-image: url("../img/hand-3_hover.svg");
-}
-
-#scissor:hover + .card-text {
+.la-hand-scissors:hover,
+.la-hand-scissors:hover + .card-text {
   color: #00c4c4;
 }
 
