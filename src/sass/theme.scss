@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Urbanist";
+    src: url('../fonts/urbanist-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/urbanist-variablefont_wght-webfont.woff') format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    color: black;
+    font-family: "Urbanist";       
+}

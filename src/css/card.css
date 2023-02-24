@@ -1,0 +1,55 @@
+.selection-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  flex: 1;
+}
+
+.card-div-text {
+  width: inherit;
+  height: inherit;
+  display: flex;
+}
+
+.card-text {
+  margin-top: 50px;
+}
+
+.image-selection {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.la-hand-rock {
+  transform: rotate(90deg);
+  font-size: 200px;
+}
+
+.la-hand-rock:hover,
+.la-hand-rock:hover + .card-text {
+  color: #00c4c4;
+}
+
+.la-hand-paper {
+  font-size: 200px;
+}
+
+.la-hand-paper:hover,
+.la-hand-paper:hover + .card-text {
+  color: #00c4c4;
+}
+
+.la-hand-scissors {
+  transform: scale(-1, 1);
+  font-size: 200px;
+}
+
+.la-hand-scissors:hover,
+.la-hand-scissors:hover + .card-text {
+  color: #00c4c4;
+}
+
+/*# sourceMappingURL=card.css.map */
