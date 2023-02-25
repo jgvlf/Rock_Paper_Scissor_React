@@ -73,6 +73,7 @@ export function GameContainer(){
                     <Card onClick={getScissorValue} className="las la-hand-scissors" id="scissor" text="Tesoura"/>
                 </div>
             </div>
+            <Modal result="Você venceu" icon="las la-hand-rock" selection="Pedra" color={modalTextColor}/>
         </>
     )
 }
