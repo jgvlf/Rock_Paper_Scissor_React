@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/GameContainer.css"
 import { Card } from "./Card";
 import { Reset } from "./Reset";
+import { Modal } from "./Modal";
 
 export function GameContainer(){
     const selection =[
@@ -12,6 +13,7 @@ export function GameContainer(){
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
     var playerChoice = ""
+    var modalTextColor = "#00B000" 
     const [computerChoice, setComputerChoice] = useState(selection[Math.floor(Math.random()*selection.length)]);
     
     function computerSelection(){
