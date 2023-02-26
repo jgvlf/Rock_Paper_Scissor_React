@@ -6,14 +6,20 @@ import { Modal } from "./Modal";
 
 export function GameContainer(){
     const selection =[
-        "PAPEL",
-        "TESOURA",
-        "PEDRA"
+        "paper",
+        "scissors",
+        "rock"
     ]
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
-    var playerChoice = ""
-    var modalTextColor = "#00B000" 
+    var playerChoice = "";
+    const [modalDisplay, setModalDisplay] = useState("none");
+    const [modalResult, setModalResult] = useState("");
+    const [modalIcon, setModalIcon] = useState("");
+    const [modalSelection, setModalSelection] = useState("");
+    const [modalTextColor, setModalTextColor] = useState("");
+    var playerN = 0;
+    var computerN = 0;
     const [computerChoice, setComputerChoice] = useState(selection[Math.floor(Math.random()*selection.length)]);
     
     function computerSelection(){
@@ -28,28 +34,110 @@ export function GameContainer(){
 
     function getRockValue(){
         computerSelection();
-        playerChoice = "PEDRA"
+        playerChoice = "rock"
         console.log("Clicou na Pedra")
         getWinner();
     }
 
     function getPaperValue(){
         computerSelection();
-        playerChoice = "PAPEL"
+        playerChoice = "paper"
         console.log("Clicou no Papel")
         getWinner();
     }
     
     function getScissorValue(){
         computerSelection();
-        playerChoice = "TESOURA"
+        playerChoice = "scissors"
         console.log("Clicou na Tesoura")
+        console.log(modalDisplay);
         getWinner();
+        console.log(modalDisplay);  
+    }
+
+    function exitModal(){
+        if(modalDisplay == "block"){
+            setModalDisplay("none");
+        }
     }
 
     function getWinner(){
+        if(playerChoice == computerChoice){
+            setModalDisplay("block");
+            setModalResult("Empate");
+            setModalIcon(`las la-hand-${computerChoice}`);
+            if(computerChoice == "rock"){
+                setModalSelection("Pedra");
+            }
+            if(computerChoice == "scissors"){
+                setModalSelection("Tesoura");
+            }
+            else{
+                setModalSelection("Papel");
+            }
+            setModalTextColor("#B0B0B0");
+
+        }
+        else if(playerChoice == "rock"){
+            if(computerChoice == "scissors"){
+                setModalDisplay("block");
+                setModalResult("Você venceu!");
+                setModalIcon(`las la-hand-scissors`);
+                setModalSelection("Tesoura");
+                setModalTextColor("#00B000");
+                setPlayerScore(playerScore + 1);
+            }
+
+            if(computerChoice == "paper"){
+                setModalDisplay("block");
+                setModalResult("Você perdeu!");
+                setModalIcon(`las la-hand-paper`);
+                setModalSelection("Papel");
+                setModalTextColor("#B00000");
+                setComputerScore(computerScore + 1);
+            }
+        }
+        else if(playerChoice == "paper"){
+            if(computerChoice == "rock"){
+                setModalDisplay("block");
+                setModalResult("Você venceu!");
+                setModalIcon(`las la-hand-rock`);
+                setModalSelection("Pedra");
+                setModalTextColor("#00B000");
+                setPlayerScore(playerScore + 1);
+            }
+
+            if(computerChoice == "scissors"){
+                setModalDisplay("block");
+                setModalResult("Você perdeu!");
+                setModalIcon(`las la-hand-scissors`);
+                setModalSelection("Tesoura");
+                setModalTextColor("#B00000");
+                setComputerScore(computerScore + 1);
+            }
+        }
+        else if(playerChoice == "scissors"){
+            if(computerChoice == "paper"){
+                setModalDisplay("block");
+                setModalResult("Você venceu!");
+                setModalIcon(`las la-hand-paper`);
+                setModalSelection("Papel");
+                setModalTextColor("#00B000");
+                setPlayerScore(playerScore + 1);
+            }
+
+            if(computerChoice == "rock"){
+                setModalDisplay("block");
+                setModalResult("Você perdeu!");
+                setModalIcon(`las la-hand-rock`);
+                setModalSelection("Pedra");
+                setModalTextColor("#B00000");
+                setComputerScore(computerScore + 1);
+            }
+        }
         console.log(`Computador escolheu: ${computerChoice}`)
         console.log(`Jogador escolheu: ${playerChoice}`)
+        
     }
 
     return(
@@ -75,7 +163,7 @@ export function GameContainer(){
                     <Card onClick={getScissorValue} className="las la-hand-scissors" id="scissor" text="Tesoura"/>
                 </div>
             </div>
-            <Modal result="Você venceu" icon="las la-hand-rock" selection="Pedra" color={modalTextColor}/>
-        </>
+            <Modal onClick={exitModal} display={modalDisplay} result={modalResult} icon={modalIcon} selection={modalSelection} color={modalTextColor}/>
+           </>
     )
 }
