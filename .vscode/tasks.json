@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "react-scripts start"
+		},
+		{
+			"label": "Build SASS",
+			"command": "npx",
+			"args": [
+				"sass",
+				"--watch",
+				"src/sass:src/css",
+			]
+		}
+	]
+}

@@ -31,6 +31,7 @@
 .la-hand-rock:hover,
 .la-hand-rock:hover + .card-text {
   color: #00c4c4;
+  cursor: pointer;
 }
 
 .la-hand-paper {
@@ -40,6 +41,7 @@
 .la-hand-paper:hover,
 .la-hand-paper:hover + .card-text {
   color: #00c4c4;
+  cursor: pointer;
 }
 
 .la-hand-scissors {
@@ -50,6 +52,7 @@
 .la-hand-scissors:hover,
 .la-hand-scissors:hover + .card-text {
   color: #00c4c4;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=card.css.map */
