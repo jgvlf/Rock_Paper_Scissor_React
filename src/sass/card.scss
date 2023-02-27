@@ -31,6 +31,7 @@
 .la-hand-rock:hover,
 .la-hand-rock:hover + .card-text{
     color: #00c4c4;
+    cursor: pointer;
 }
 
 
@@ -41,6 +42,7 @@
 .la-hand-paper:hover,
 .la-hand-paper:hover + .card-text{
     color: #00c4c4;
+    cursor: pointer;
 }
 
 
@@ -52,46 +54,5 @@
 .la-hand-scissors:hover,
 .la-hand-scissors:hover + .card-text{
     color: #00c4c4;
+    cursor: pointer;
 }
-
-
-// #rock{
-//     background-image: url("../img/hand.svg");
-// }
-
-// #rock:hover,
-// #rock:focus{
-//     background-image: url("../img/hand_hover.svg");
-// }
-
-// #rock:hover + .card-text{
-//     color: #00c4c4;
-// }
-
-// #paper{
-//     background-image: url("../img/hand-2.svg");
-// }
-
-// #paper:hover,
-// #paper:focus{
-//     background-image: url("../img/hand-2_hover.svg");
-    
-// }
-
-// #paper:hover + .card-text{
-//     color: #00c4c4;
-// }
-
-// #scissor{
-//     background-image: url("../img/hand-3.svg");
-// }
-
-// #scissor:hover,
-// #scissor:focus{
-//     background-image: url("../img/hand-3_hover.svg");
-   
-// }
-
-// #scissor:hover + .card-text{
-//     color: #00c4c4;
-// }

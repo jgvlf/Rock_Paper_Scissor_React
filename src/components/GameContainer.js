@@ -72,7 +72,7 @@ export function GameContainer(){
             if(computerChoice == "scissors"){
                 setModalSelection("Tesoura");
             }
-            else{
+            if(computerChoice == "paper"){
                 setModalSelection("Papel");
             }
             setModalTextColor("#B0B0B0");
